@@ -4,8 +4,8 @@
   command: git init && git config user.name "{{ source_control_username }}" && git config user.email "{{ source_control_email }}"
   args:
     chdir: /tmp/splunkPS_base_configs
-- name: prep_configs - GIT commit the base configs repo with date and add the remote origin
-  command: git commit -m "Update Check {{ ansible_date_time.date }}" && git remote add origin {{ source_control_url }}/splunkPS_base_configs.git
+- name: prep_configs - GIT add all and commit the base configs repo with date and add the remote origin
+  command: git add --all && git commit -m "Update Check {{ ansible_date_time.date }}" && git remote add origin {{ source_control_url }}/splunkPS_base_configs.git
   args:
     chdir: /tmp/splunkPS_base_configs
 
@@ -13,7 +13,7 @@
   command: git init && git config user.name "{{ source_control_username }}" && git config user.email "{{ source_control_email }}"
   args:
     chdir: /tmp/splunkPS_cluster_configs
-- name: prep_configs - GIT commit the cluster configs repo with date and add the remote origin
-  command: git commit -m "Update Check {{ ansible_date_time.date }}" && git remote add origin {{ source_control_url }}/splunkPS_base_configs.git
+- name: prep_configs - GIT add all and commit the cluster configs repo with date and add the remote origin
+  command: git add --all && git commit -m "Update Check {{ ansible_date_time.date }}" && git remote add origin {{ source_control_url }}/splunkPS_base_configs.git
   args:
     chdir: /tmp/splunkPS_cluster_configs
