@@ -1,0 +1,8 @@
+galaxy_info:
+  author: D347HFR0MA80V3
+  description: Simple role when configured will automate the pull and push of Splunk PS base and cluster base configs
+  company: CAS Cyber Security || ClearShark || Shad0w Synd1cate
+  min_ansible_version: 2.8
+  galaxy_tags:
+    - splunk
+    - github

@@ -1,0 +1,11 @@
+# Task... pushes configs to git repos
+
+- name: push_configs - GIT push the base configs
+  command: git push -u master
+  args:
+    chdir: /tmp/splunkPS_base_configs
+
+- name: push_configs - GIT push the cluster configs
+  command: git push -u master
+  args:
+    chdir: /tmp/splunkPS_cluster_configs

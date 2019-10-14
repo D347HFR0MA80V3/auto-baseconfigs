@@ -1,0 +1,15 @@
+# Task... get the configs from gdrive
+
+- name: get_configs - COMMAND run gdrive util to get base configs and stash them
+  command: /bin/gdrive download --recursive {{ splunk_gdrive_baseconfigs_fileID }}
+  args:
+    chdir: /tmp
+- name: get_configs - COMMAND rename base configs directory
+  command: mv /tmp/'Configurations - Base' /tmp/splunkPS_base_configs
+
+- name: get_configs - COMMAND run gdrive util to get cluster base configs and stash them
+  command: /bin/gdrive download --recursive {{ splunk_gdrive_clusterconfigs_fileID }}
+  args:
+    chdir: /tmp
+- name: get_configs - COMMAND rename cluster configs directory
+  command: mv /tmp/'Configurations - Index Replication' /tmp/splunkPS_cluster_configs

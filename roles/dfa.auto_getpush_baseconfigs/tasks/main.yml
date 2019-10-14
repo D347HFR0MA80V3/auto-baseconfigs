@@ -1,0 +1,10 @@
+# tasks file for dfa.auto_getpush_baseconfigs
+
+- include: get_configs.yml
+  tags: get_configs.yml
+
+- include: prep_configs.yml
+  tags: prep_configs
+
+- include: push_configs.yml
+  tags: push_configs

@@ -1,0 +1,9 @@
+# defaults file for dfa.auto_getpush_baseconfigs
+# these values should be reconfigured in the container image
+
+splunk_gdrive_baseconfigs_fileID: 'replace_with_fileID_strings'
+splunk_gdrive_clusterconfigs_fileID: 'replace_with_fileID_strings'
+source_control_email: someemailaddress@foo.com
+source_control_url: https://github.com/<username>
+source_control_username: username
+source_control_password: password

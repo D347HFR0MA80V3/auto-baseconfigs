@@ -1,0 +1,5 @@
+# launch playbook for lwg.auto_getpush_baseconfigs role
+
+- hosts: localhost
+  roles:
+  - dfa.auto_getpush_baseconfigs
